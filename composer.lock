@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f180575fbc433b0a44b1b81b28f1377",
+    "content-hash": "eaff4cc102b4384a8017bef262aa1c9b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2830,6 +2830,67 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "rogervila/laravel-legacy-ui",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rogervila/laravel-legacy-ui.git",
+                "reference": "a91926949a2d2920df7415c89cb9a5c21612890c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rogervila/laravel-legacy-ui/zipball/a91926949a2d2920df7415c89cb9a5c21612890c",
+                "reference": "a91926949a2d2920df7415c89cb9a5c21612890c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.0",
+                "illuminate/filesystem": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\LegacyUi\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\LegacyUi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Legacy UI with Auth scaffolding for Laravel 8",
+            "keywords": [
+                "auth scaffolding",
+                "laravel",
+                "legacy",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/rogervila/laravel-legacy-ui/issues",
+                "source": "https://github.com/rogervila/laravel-legacy-ui/tree/v3.1.0"
+            },
+            "time": "2020-11-26T15:15:03+00:00"
         },
         {
             "name": "staudenmeir/eloquent-json-relations",
@@ -7986,5 +8047,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
