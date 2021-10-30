@@ -43,31 +43,32 @@ class LoginController extends Controller
     }
 
 
-    public function login(Request $request) {
+    public function login(Request $request)
+    {
         // get the user from the database
-        $user = User::where('email' , $request->email)->first();
-        
-        if(!$user) {// check if the user actually exists
+        //dd($request);
+        $user = User::where('email', $request->email)->first();
+
+        if (!$user) { // check if the user actually exists
             return response()->json(["message" => "email not found"], 404);
         } else {
-            if($user->status === 0) {
+            if ($user->status === 0) {
                 return response()->json(["message" => "This account is deactivated"], 403);
-            } else if(!Hash::check($request->password, $user->password)) {
+            } else if (!Hash::check($request->password, $user->password)) {
                 return response()->json(["message" => "WRONG PASSWORD!"]);
             } else {
                 Auth::attempt(['email' => $request->email, "password" => $request->password], true);
                 return response()->json(["message" => "Successful", "code" => 200]);
             }
-
         }
     }
 
 
-    public function formatResponse($message, $code) {
-        if($code > 100 && $code < 400) {
+    public function formatResponse($message, $code)
+    {
+        if ($code > 100 && $code < 400) {
             return response()->json(["message" => "Successful", "code" => 200]);
         } else {
-            
         }
     }
 }

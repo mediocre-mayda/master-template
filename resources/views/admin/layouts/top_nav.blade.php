@@ -7,12 +7,12 @@
         <ul class=" navbar-right">
             <li class="nav-item dropdown open">
                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    {{Auth::user()}}
+                    {{Auth::user()->name}}
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/" target="_blank"><i class="fa fa-home pull-right"></i> Home Page</a>
-                    <a class="dropdown-item" href="/" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out pull-right"></i> Logout</a>
-                    <form id="logout-form" action="/" method="POST" style="display: none;">
+                    <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out pull-right"></i> Logout</a>
+                    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                         @csrf
                     </form>
                 </div>
